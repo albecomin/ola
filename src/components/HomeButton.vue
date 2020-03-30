@@ -1,5 +1,5 @@
 <template>
-  <h3 class="home-button text-right" @click="$emit('homeButtonClicked', id)">
+  <h3 class="home-button clickable text-right" @click="$emit('homeButtonClicked', id)">
     {{ content }}
   </h3>
 </template>
@@ -21,11 +21,4 @@ export default {
 
 @import "../scss/variables.scss";
 
-.home-button {
-  cursor: pointer;
-  font-family: $font-header;
-}
-.home-button:hover {
-  text-shadow: 0 0 2px $shadow;
-}
 </style>

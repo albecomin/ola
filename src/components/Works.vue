@@ -1,6 +1,13 @@
 <template>
-  <div class="works">
-    Works
+  <div class="works container">    
+    <div class="page__header row text-left">
+      <h1>
+        Works
+      </h1>
+    </div>
+    <div class="page__body row text-left mt-3 mb-5">
+      In progress...
+    </div>
   </div>
 </template>
 

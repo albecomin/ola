@@ -1,6 +1,6 @@
 <template>
   <div class="home unselectable">
-    <div class="row">
+    <div class="row mt-5">
       <h1 class="text-left m-2">
         Aleksandra <br/>
         Ewa <br/>
@@ -13,6 +13,7 @@
         <div class="m-2">
           <home-button content="Works" id="works" @homeButtonClicked="goToPage"/>
           <home-button content="Bio" id="bio" @homeButtonClicked="goToPage"/>
+          <home-button content="About" id="about" @homeButtonClicked="goToPage"/>
         </div>        
       </div>      
     </div>
@@ -47,4 +48,5 @@ export default {
 h1 {
   font-family: $font-header;
 }
+
 </style>

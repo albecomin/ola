@@ -13,6 +13,7 @@ Vue.use(VueRouter);
 import Home from "./components/Home"
 import Bio from "./components/Bio"
 import Works from "./components/Works"
+import About from "./components/About"
 
 const router = new VueRouter({
   routes: [
@@ -30,6 +31,11 @@ const router = new VueRouter({
       path: "/bio",
       name: "bio",
       component: Bio
+    },
+    {
+      path: "/about",
+      name: "about",
+      component: About
     },
   ]
 });
