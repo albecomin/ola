@@ -11,9 +11,7 @@
     <div class="row mt-5">
       <div class="col">
         <div class="m-2">
-          <home-button content="Works" id="works" @homeButtonClicked="goToPage"/>
-          <home-button content="Bio" id="bio" @homeButtonClicked="goToPage"/>
-          <home-button content="About" id="about" @homeButtonClicked="goToPage"/>
+          <home-button v-for="btn in svgButtons" :key="btn.id" :id="btn.id" :content="btn.icon" @homeButtonClicked="goToPage"/>
         </div>        
       </div>      
     </div>
@@ -21,11 +19,22 @@
 </template>
 
 <script>
+let a  =require('./../assets/bio.svg');
+console.log(a)
+
 
 import HomeButton from "./HomeButton"
 
 export default {
   name: 'Home',
+  data: function() {
+    return {
+      svgButtons: [
+        { id:"bio", icon: require('./../assets/bio.svg') },
+        { id:"works", icon: require('./../assets/works.svg') },
+      ]
+    }
+  },
   methods: {
     goToPage: function(id) {
       console.log("go to", id)
