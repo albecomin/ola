@@ -76,11 +76,22 @@ ul {
   cursor: pointer;
 }
 #home__title {
-    font-size: 44px;
+    font-size: 48px;
     margin: 24px 0 48px 0;
 }
 .home__button {
+  font-size: 24px;
+  width: min-content;
+  cursor: pointer;
+  user-select: none;
+  padding: 4px 16px;
+}
 
+.home__button:hover > div {
+  text-shadow: 0 0 1em rgba(0, 0, 0, 0.8) !important;
+}
+.home__button:active > div {
+  text-shadow: 0 0 1em rgba(0, 0, 0, 0.9) !important;
 }
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-up(md) {
