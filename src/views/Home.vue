@@ -28,6 +28,9 @@
 export default {
   name: 'Home',
   components: {
+  },
+  created(){
+    document.title = "Aleksandra Ewa Nowak - Painter & Visual Artist";
   }
 }
 </script>

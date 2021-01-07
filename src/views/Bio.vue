@@ -5,13 +5,13 @@
         <h3>Aleksandra <br> Ewa <br> Nowak</h3>
         <h4>Painter, visual artist</h4>
       </b-col>
-      <b-col align="left" cols="12" style="padding-top: 32px;">        
+      <b-col align="left" cols="12" style="padding-top: 32px;">
         <p>Born on 23.02.1991 in Warsaw (Poland)<br>
         Lives and works in Genoa, Italy</p>
         <p>
           Graduated in set design from the Fine Art Accademy in Genoa
           (Italy)
-          <br> 
+          <br>
           The title of the thesis: “The sign and gesture in music and in visual arts”, got
           maximum of votes with honours.
         </p>
@@ -20,15 +20,15 @@
         <h5>Exhibitions</h5>
         <ul v-for="event in events" :key="event.index">
           <li class="event">
-            <p class="event__date">{{ event.date }}</p>          
+            <p class="event__date">{{ event.date }}</p>
             <p class="event__place">{{ event.place }}</p>
             <p class="event__description">{{ event.description }}</p>
           </li>
-        </ul>        
-        
+        </ul>
+
         <p>
-          
-         
+
+
         </p>
       </b-col>
     </b-row>
@@ -63,6 +63,9 @@ export default {
   name: 'Bio',
   components: {
   },
+  created(){
+    document.title = "Aleksandra Ewa Nowak - Bio";
+  },
   data: function () {
     return {
       events: [
@@ -77,7 +80,7 @@ export default {
           date: 'May 2019 - September 2019',
           place: 'Castello d’Albertis, Genoa',
           description: `
-            Collective exhibition 
+            Collective exhibition
             "Landscapes from within / Paesaggi interiori"
           `
         },
@@ -159,7 +162,7 @@ export default {
           date: '2002',
           place: 'Pio church, Ojciec, Warsaw',
           description: `
-            Violin concerts in 
+            Violin concerts in
           `
         },
         {

@@ -12,6 +12,9 @@
 export default {
   name: 'Works',
   components: {
+  },
+  created () {
+    document.title = "Aleksandra Ewa Nowak - Works";
   }
 }
 </script>

@@ -8,7 +8,7 @@
           the pauses and silences.
         </p>
         <p style="padding: 0 16px; font-style: italic;">
-          Situations of strong gestualities, spaces of absolut silence and of the extreme noise.          
+          Situations of strong gestualities, spaces of absolut silence and of the extreme noise.
         </p>
         <p style="padding: 0 16px; font-style: italic;">
           The peaces of the situations, fragments of images suggested by visual or/and sound
@@ -30,7 +30,7 @@
         <p style="padding: 0 16px; font-style: italic;">
           The sign is the direct medium as the result of the pretty same gesture when it comes to the
           musical execution as well as the pictorical one.
-        </p>   
+        </p>
         <p>
           My pictorical practice composes the spaces of pauses and chords, using the white or
           monocrome as the resonance of the silence and the colour as the sound which cuts,
@@ -45,6 +45,9 @@
 export default {
   name: 'About',
   components: {
+  },
+  created () {
+    document.title = "Aleksandra Ewa Nowak - About";
   }
 }
 </script>
