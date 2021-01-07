@@ -1,72 +1,38 @@
 <template>
-  <div id="app" class="container">
-    <custom-navbar v-if="$route.name !== 'home'"/>
-    <router-view></router-view>
+  <div id="app">
+    <NavBar class="fixed-top"
+    v-if="this.$route.path !== '/'"></NavBar>
+    <b-container style="margin-top: 96px;">
+      <b-row>
+        <b-col>
+          <transition name="fade" mode="out-in">
+            <router-view/>
+          </transition>          
+        </b-col>
+      </b-row>
+    </b-container>    
   </div>
 </template>
 
-<script>
-import CustomNavbar from "./components/CustomNavbar"
-
-export default {
-  name: 'App',
-  components: {
-    CustomNavbar
-  },
-}
-</script>
-
 <style lang="scss">
-
-@import "./scss/variables.scss";
-
-
-.unselectable {
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;    
+.fade-enter-active {
+  transition: opacity .8s;
 }
-.no-gutters {
-  margin-right: 0;
-  margin-left: 0;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
+.fade-leave-active {
+  transition: opacity .4s;
 }
-
-.clickable {
-  cursor: pointer;
-  font-family: $font-header;
-}
-.clickable:hover {
-  text-shadow: 0 0 2px $shadow;
-}
-
-.page__header {
-  font-family: $font-header;
-  font-weight: bold;
-  color: $primary;
-}
-.page__body {
-  font-family: $font-body;
-  color: $primary;
-}
-
-body {
-  background: $background;
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: $primary;
-
-  // margin-top: 60px;
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
+
+<script>
+import NavBar from '@/components/NavBar.vue'
+
+export default {
+  name: 'app',
+  components: {
+    NavBar
+  }
+}
+</script>

@@ -1,0 +1,80 @@
+// Define variable defaults
+$body-bg: #fafafa;
+$body-color: #424242;
+$primary:       #424242 !default;
+$secondary: #eeeeee;
+$gray: #c7c7c7;
+$gray-dark: #6d6d6d;
+// $secondary:     $gray-600 !default;
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-800 !default;
+
+// Then import Bootstrap an BootstrapVue SCSS files (order is important)
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Montserrat-Regular'), url(~@/assets/fonts/Montserrat/Montserrat-Regular.ttf) format('woff');
+}
+@font-face {
+    font-family: 'Allerta Stencil';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(~@/assets/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf) format('woff');
+}
+@font-face {
+    font-family: 'Source Serif Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(~@/assets/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf) format('woff');
+}
+h1 {
+    font-family: 'Allerta Stencil', sans-serif;
+}
+h2 {
+    font-family: 'Allerta Stencil', sans-serif;
+    margin-bottom: 24px;
+}
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 4px;
+}
+#home__title {
+    font-size: 44px;
+    margin: 24px 0 48px 0;
+}
+.home__button {
+    
+}
+// Small devices (landscape phones, less than 768px)
+@include media-breakpoint-up(md) {
+    #home__title {
+        font-size: 96px;
+    }
+    .home__button {
+        font-size: 32px !important;
+    }
+}
