@@ -1,10 +1,11 @@
 // Define variable defaults
-$body-bg: #fafafa;
+$body-bg: #fff5e7;
 $body-color: #424242;
 $primary:       #424242 !default;
-$secondary: #eeeeee;
+$secondary: darken($body-bg, 1%);
 $gray: #c7c7c7;
 $gray-dark: #6d6d6d;
+$light: $body-bg;
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -53,6 +54,15 @@ h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 }
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
@@ -62,12 +72,15 @@ ul {
     margin-left: 0;
     padding-left: 4px;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 #home__title {
     font-size: 44px;
     margin: 24px 0 48px 0;
 }
 .home__button {
-    
+
 }
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-up(md) {
