@@ -1,11 +1,12 @@
 // Define variable defaults
-$body-bg: #fff5e7;
-$body-color: #424242;
-$primary:       #424242 !default;
+$body-bg: #f5fdff;
+$body-color: #384344;
+$primary:       #384344 !default;
 $secondary: darken($body-bg, 1%);
 $gray: #c7c7c7;
 $gray-dark: #6d6d6d;
 $light: $body-bg;
+$accent: darken($body-bg, 10%);
 // $secondary:     $gray-600 !default;
 // $success:       $green !default;
 // $info:          $cyan !default;
@@ -25,25 +26,12 @@ $light: $body-bg;
     font-display: swap;
     src: local('Montserrat-Regular'), url(~@/assets/fonts/Montserrat/Montserrat-Regular.ttf) format('woff');
 }
-@font-face {
-    font-family: 'Allerta Stencil';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(~@/assets/fonts/Allerta_Stencil/AllertaStencil-Regular.ttf) format('woff');
-}
-@font-face {
-    font-family: 'Source Serif Pro';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(~@/assets/fonts/Source_Serif_Pro/SourceSerifPro-Regular.ttf) format('woff');
-}
+
 h1 {
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 h2 {
-    font-family: 'Allerta Stencil', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin-bottom: 24px;
 }
 h3 {
